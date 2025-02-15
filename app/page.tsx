@@ -8,6 +8,7 @@ export default async function Home() {
   return (
     <div>
       {/* <Profile /> */}
+      <div>Hello world!</div>
       <Suspense fallback={<div>loading...</div>}>
         <Page />
       </Suspense>
