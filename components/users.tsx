@@ -1,6 +1,10 @@
-// "use cache";
+import RevalidateData from "@/server/revalidate-data";
+import { unstable_cacheTag as cacheTag } from "next/cache";
 
 async function Users() {
+  "use cache";
+  cacheTag("post-data");
+
   type usr = {
     userId: number;
     id: number;
@@ -27,8 +31,11 @@ async function Users() {
 }
 
 export default async function Page() {
+  const reval = async () => {
+    await RevalidateData();
+  };
   return (
-    <main>
+    <main onClick={reval}>
       <Users />
     </main>
   );
