@@ -11,7 +11,7 @@ async function Users() {
   const users = await fetch("https://jsonplaceholder.typicode.com/posts").then(
     (response) => response.json()
   );
-  const tt = await new Promise((resolve) => setTimeout(resolve, 5000));
+  // const tt = await new Promise((resolve) => setTimeout(resolve, 5000));
   return (
     <>
       {users.map((item: usr, index: number) => {
