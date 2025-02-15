@@ -1,4 +1,4 @@
-"use cache";
+// "use cache";
 
 async function Users() {
   type usr = {
