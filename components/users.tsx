@@ -31,11 +31,8 @@ async function Users() {
 }
 
 export default async function Page() {
-  const reval = async () => {
-    await RevalidateData();
-  };
   return (
-    <main onClick={reval}>
+    <main>
       <Users />
     </main>
   );
